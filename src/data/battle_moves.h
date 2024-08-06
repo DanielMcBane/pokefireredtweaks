@@ -1824,7 +1824,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_MULTI_HIT,
         .power = 20,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 20,
         .secondaryEffectChance = 0,
@@ -1888,7 +1888,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_BUBBLE] =
     {
         .effect = EFFECT_SPEED_DOWN_HIT,
-        .power = 20,
+        .power = 30,
         .type = TYPE_WATER,
         .accuracy = 100,
         .pp = 30,
