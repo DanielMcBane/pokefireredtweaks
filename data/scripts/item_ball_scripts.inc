@@ -1,8 +1,3 @@
-Common_EventScript_FindItem::
-	callnative GetObjectEventTrainerRangeFromTemplate
-	finditem VAR_RESULT
-	end
-
 Route2_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end

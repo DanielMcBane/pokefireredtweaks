@@ -42,14 +42,6 @@ extern ScrCmdFunc gScriptCmdTable[];
 extern ScrCmdFunc gScriptCmdTableEnd[];
 extern void *gNullScriptPtr;
 
-// Added as a custom script to streamline creating new overworld items to pick up
-// This will set the value of the object's trainerRange_berryTreeId (Sight Radius/Berry Tree ID in porymap) to VAR_RESULT
-// https://github.com/pret/pokeemerald/wiki/Set-Up-Item-Balls-on-a-Map-Without-Needing-New-Scripts
-void GetObjectEventTrainerRangeFromTemplate(void)
-{
-    gSpecialVar_Result = gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].trainerRange_berryTreeId;
-}
-
 void InitScriptContext(struct ScriptContext *ctx, void *cmdTable, void *cmdTableEnd)
 {
     s32 i;
