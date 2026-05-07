@@ -20,7 +20,9 @@ while row_counter < 37:
 
 # This block gets through gens 1+2, the unown break things, so I need to skip some lines to get the gen 3 mons
 mon_name_list = []
+mon_base_hp_list = []
 while len(mon_name_list) < 251:
+    # this section gets a mon's name
     # read 13 gets to the name of the mon in each string
     file1.read(13)
     mon_name = ""
@@ -30,6 +32,7 @@ while len(mon_name_list) < 251:
         if temp != "]":
             mon_name += temp
     mon_name_list.append(mon_name)
+    # skip the end of the line after the name and the rest of the mon's statblock to get to the next mon 
     for x in range(0,29):
         file1.readline()
 # skipping the unown lines
@@ -54,7 +57,7 @@ while len(mon_name_list) < 386:
 # Trying using a pandas DataFrame to export it to excel
 df = DataFrame({'Name': mon_name_list})
 print(df)
-# This no work for some reason :(
+# This does work, but it shows up in the main POKEFIREREDTWEAKS directory
 df.to_excel('charted_species_info.xlsx', sheet_name='sheet1', index=False)
 
 # Each pokemon entry is 29 lines
