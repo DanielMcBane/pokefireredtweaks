@@ -31,12 +31,18 @@ def grab_stats():
     base_spatk = ""
     base_spdef = ""
     base_speed = ""
+    type_1 = ""
+    type_2 = ""
+    ability_1 = ""
+    ability_2 = ""
     while temp != "]":
         temp = file1.read(1)
         if temp != "]":
             mon_name += temp
     mon_name_list.append(mon_name)
+
     # this section gets a mon's base stats
+
     # base hp
     # read two lines to get to the start of the base hp line
     file1.readline()
@@ -51,6 +57,7 @@ def grab_stats():
         if temp != ",":
             base_hp += temp
     mon_base_hp_list.append(base_hp)
+
     # base atk
     # read one line to get to the start of the base atk line
     file1.readline()
@@ -64,8 +71,104 @@ def grab_stats():
         if temp != ",":
             base_atk += temp
     mon_base_atk_list.append(base_atk)
-    # skip the end of the line after the name and the rest of the mon's statblock to get to the next mon 
-    for x in range(0,26):
+
+    # base def
+    # read one line to get to the start of the base def line
+    file1.readline()
+    while temp != "=":
+        temp = file1.read(1)
+    # read one more character to get past the space after the "="
+    file1.read(1)
+    # read until you hit the comma
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            base_def += temp
+    mon_base_def_list.append(base_def)
+
+    # base speed
+    # read one line to get to the start of the base speed line
+    file1.readline()
+    while temp != "=":
+        temp = file1.read(1)
+    # read one more character to get past the space after the "="
+    file1.read(1)
+    # read until you hit the comma
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            base_speed += temp
+    mon_base_speed_list.append(base_speed)
+
+    # base spatk
+    # read one line to get to the start of the base spatk line
+    file1.readline()
+    while temp != "=":
+        temp = file1.read(1)
+    # read one more character to get past the space after the "="
+    file1.read(1)
+    # read until you hit the comma
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            base_spatk += temp
+    mon_base_spatk_list.append(base_spatk)
+
+    # base spdef
+    # read one line to get to the start of the base spdef line
+    file1.readline()
+    while temp != "=":
+        temp = file1.read(1)
+    # read one more character to get past the space after the "="
+    file1.read(1)
+    # read until you hit the comma
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            base_spdef += temp
+    mon_base_spdef_list.append(base_spdef)
+
+    # getting types
+    # getting primary type
+    file1.readline()
+    while temp != "{":
+        temp = file1.read(1)
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            type_1 += temp
+    mon_type_1_list.append(type_1)
+
+    # getting secondary type
+    file1.read(1)
+    while temp != "}":
+        temp = file1.read(1)
+        if temp != "}":
+            type_2 += temp
+    mon_type_2_list.append(type_2)
+
+    # getting abilities
+    # getting first ability
+    for i in range(16):
+        file1.readline()
+    while temp != "{":
+        temp = file1.read(1)
+    while temp != ",":
+        temp = file1.read(1)
+        if temp != ",":
+            ability_1 += temp
+    mon_ability_1_list.append(ability_1)
+
+    # getting second ability
+    file1.read(1)
+    while temp != "}":
+        temp = file1.read(1)
+        if temp != "}":
+            ability_2 += temp
+    mon_ability_2_list.append(ability_2)
+
+    # skip the end of the line after that and the rest of the mon's statblock to get to the next mon 
+    for x in range(0,5):
         file1.readline()
 
 # This block gets through gens 1+2, the unown break things, so I need to skip some lines to get the gen 3 mons
@@ -76,6 +179,10 @@ mon_base_def_list = []
 mon_base_spatk_list = []
 mon_base_spdef_list = []
 mon_base_speed_list = []
+mon_type_1_list = []
+mon_type_2_list = []
+mon_ability_1_list = []
+mon_ability_2_list = []
 while len(mon_name_list) < 251:
     grab_stats()
     # # this section gets a mon's name
@@ -119,7 +226,15 @@ while len(mon_name_list) < 386:
 df = DataFrame({
     'Name': mon_name_list,
     'Base HP': mon_base_hp_list,
-    'Base Attack': mon_base_atk_list
+    'Base Attack': mon_base_atk_list,
+    'Base Defense': mon_base_def_list,
+    'Base Special Attack': mon_base_spatk_list,
+    'Base Special Defense': mon_base_spdef_list,
+    'Base Speed': mon_base_speed_list,
+    'Primary Type': mon_type_1_list,
+    'Secondary Type': mon_type_2_list,
+    'Ability 1': mon_ability_1_list,
+    'Ability 2': mon_ability_2_list
     })
 print(df)
 # This does work, but it shows up in the main POKEFIREREDTWEAKS directory
