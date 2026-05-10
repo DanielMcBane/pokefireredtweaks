@@ -5673,36 +5673,41 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLance[] = {
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_LeaderBrock[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderBrock[] = {
     {
-        .iv = 0,
+        .iv = 50,
         .lvl = 14,
         .species = SPECIES_GEODUDE,
-        .moves = {MOVE_ROCK_TOMB, MOVE_ROLLOUT, MOVE_SAND_ATTACK, MOVE_BRICK_BREAK},
+	.heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_BRICK_BREAK, MOVE_ROLLOUT, MOVE_SAND_ATTACK, MOVE_NONE},
     },
     {
-        .iv = 0,
+        .iv = 50,
         .lvl = 13,
         .species = SPECIES_RHYHORN,
-        .moves = {MOVE_STOMP, MOVE_ROCK_TOMB, MOVE_NONE, MOVE_NONE},
+	.heldItem = ITEM_ORAN_BERRY,
+        .moves = {MOVE_STOMP, MOVE_ROCK_TOMB, MOVE_LEER, MOVE_NONE},
     },
     {
-	.iv = 0,
+	.iv = 50,
 	.lvl = 13,
 	.species = SPECIES_OMANYTE,
-	.moves = {MOVE_ROCK_TOMB, MOVE_WHIRLPOOL, MOVE_CONFUSE_RAY, MOVE_NONE},
+	.heldItem = ITEM_ORAN_BERRY,
+	.moves = {MOVE_ROCK_TOMB, MOVE_WHIRLPOOL, MOVE_CONFUSE_RAY, MOVE_POWDER_SNOW},
     },
     {
-	.iv = 0,
+	.iv = 50,
 	.lvl = 13,
 	.species = SPECIES_KABUTO,
-	.moves = {MOVE_ROCK_TOMB, MOVE_WATER_PULSE, MOVE_SLASH, MOVE_NONE},
+	.heldItem = ITEM_ORAN_BERRY,
+	.moves = {MOVE_ROCK_TOMB, MOVE_WATER_PULSE, MOVE_SLASH, MOVE_FURY_CUTTER},
     },
     {
-	.iv = 0,
+	.iv = 50,
 	.lvl = 15,
 	.species = SPECIES_ONIX,
-	.moves = {MOVE_ROCK_TOMB, MOVE_DIG, MOVE_SCREECH, MOVE_NONE},
+	.heldItem = ITEM_SITRUS_BERRY,
+	.moves = {MOVE_ROCK_TOMB, MOVE_DIG, MOVE_SCREECH, MOVE_HEADBUTT},
     },
 };
 
