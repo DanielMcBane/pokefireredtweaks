@@ -172,8 +172,8 @@ PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
     .string "Take these with you.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
-    .string "{PLAYER} received the POKéDEX\n"
-    .string "from PROF. OAK.$"
+    .string "{PLAYER} received the National\n"
+    .string "POKéDEX from PROF. OAK.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
     .string "OAK: You can't get detailed data\n"
@@ -184,7 +184,7 @@ PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
     .string "catching wild POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
-    .string "{PLAYER} received five POKé BALLS.$"
+    .string "{PLAYER} received 20 POKé BALLS.$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
     .string "When a wild POKéMON appears,\n"
