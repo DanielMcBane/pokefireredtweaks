@@ -308,7 +308,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_BugCatcherDoug[] = {
         .iv = 0,
         .lvl = 10,
         .species = SPECIES_SHELLDER,
-	.moves = {MOVE_IRON_DEFENSE, MOVE_CLAMP, MOVE_NONE, MOVE_NONE},
+	.moves = {MOVE_IRON_DEFENSE, MOVE_CLAMP, MOVE_PURSUIT, MOVE_NONE},
     },
 };
 
@@ -317,19 +317,19 @@ static const struct TrainerMonNoItemCustomMoves sParty_BugCatcherSammy[] = {
         .iv = 0,
         .lvl = 11,
         .species = SPECIES_BEEDRILL,
-	.moves = {MOVE_TWINEEDLE, MOVE_POISON_TAIL, MOVE_NONE, MOVE_NONE},
+	.moves = {MOVE_TWINEEDLE, MOVE_POISON_STING, MOVE_NONE, MOVE_NONE},
     },
     {
 	.iv = 0,
 	.lvl = 11,
 	.species = SPECIES_BUTTERFREE,
-	.moves = {MOVE_SILVER_WIND, MOVE_SLEEP_POWDER, MOVE_GUST, MOVE_NONE},
+	.moves = {MOVE_STRING_SHOT, MOVE_SLEEP_POWDER, MOVE_GUST, MOVE_NONE},
     },
     {
 	.iv = 0,
 	.lvl = 11,
 	.species = SPECIES_VENOMOTH,
-	.moves = {MOVE_POISON_POWDER, MOVE_SILVER_WIND, MOVE_GUST, MOVE_NONE},
+	.moves = {MOVE_POISON_POWDER, MOVE_STRING_SHOT, MOVE_GUST, MOVE_NONE},
     },
     {
 	.iv = 0,
@@ -5679,7 +5679,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderBrock[] = {
         .lvl = 14,
         .species = SPECIES_GEODUDE,
 	.heldItem = ITEM_ORAN_BERRY,
-        .moves = {MOVE_BRICK_BREAK, MOVE_ROLLOUT, MOVE_SAND_ATTACK, MOVE_NONE},
+        .moves = {MOVE_ROLLOUT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 50,
@@ -7476,26 +7476,26 @@ static const struct TrainerMonNoItemCustomMoves sParty_BugCatcherCharlie[] = {
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_PARAS,
-	.moves = {MOVE_SLEEP_POWDER, MOVE_FURY_CUTTER, MOVE_LEECH_SEED, MOVE_NONE},
+        .species = SPECIES_PINECO,
+	.moves = {MOVE_IRON_DEFENSE, MOVE_PROTECT, MOVE_LEECH_SEED, MOVE_SPIKES},
     },
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_VENONAT,
-	.moves = {MOVE_POISON_POWDER, MOVE_LEECH_LIFE, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_SPINARAK,
+	.moves = {MOVE_SPIDER_WEB, MOVE_LEECH_LIFE, MOVE_POISON_STING, MOVE_ABSORB},
     },
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_METAPOD,
-	.moves = {MOVE_IRON_DEFENSE, MOVE_LEECH_LIFE, MOVE_REST, MOVE_SLEEP_TALK},
+        .species = SPECIES_YANMA,
+	.moves = {MOVE_GUST, MOVE_LEECH_LIFE, MOVE_DOUBLE_TEAM, MOVE_DETECT},
     },
     {
 	.iv = 0,
 	.lvl = 11,
-	.species = SPECIES_KAKUNA,
-	.moves = {MOVE_PROTECT, MOVE_TOXIC, MOVE_LEECH_LIFE},
+	.species = SPECIES_LEDIAN,
+	.moves = {MOVE_COMET_PUNCH, MOVE_MACH_PUNCH, MOVE_GUST, MOVE_LEECH_LIFE},
     },
 };
 
